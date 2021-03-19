@@ -23,7 +23,7 @@ jobs:
     - name: Allow RDP Property from Regdit
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - name: Assign User
-      run: Set-LocalUser -Name "mrspyboy" -Password (ConvertTo-SecureString -AsPlainText "mrspyboy" -Force)
+      run: Set-LocalUser -Name "admin" -Password (ConvertTo-SecureString -AsPlainText "mrspyboy" -Force)
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Download Timeout Script
