@@ -27,6 +27,6 @@ jobs:
     - name: Create Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Download Timeout Script
-      run: Invoke-WebRequest https://raw.githubusercontent.com/rameshchatarji/Windows-CRD/main/timeout.ps1 -OutFile timeout.ps1
+      run: Invoke-WebRequest https://raw.githubusercontent.com/mrspyboy/Windows-CRD-1/main/timeout.ps1 -OutFile timeout.ps1
     - name: Keep Alive
       run: ./timeout.ps1
